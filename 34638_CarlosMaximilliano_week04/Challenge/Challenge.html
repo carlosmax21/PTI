@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Challenge JS</title>
+    <script>
+        var lvl = 1;
+        var rec = 0;
+        function onDocumentFinish(){
+            var createdBy = window.prompt('Hero what is your name?');
+            document.getElementById("efg").innerHTML = 'Nama: ' + createdBy;
+            console.log("Hero " + createdBy + " ready for an adventure!");
+            document.getElementById('lvlup').onsubmit = function(lvlup){
+                lvlup.preventDefault();
+                console.log("Hero level increased by 1");
+                lvl+=1;
+                document.getElementById("lvl").innerHTML = 'Level: ' + lvl;
+            }
+            document.getElementById('recuit').onsubmit = function(form){
+                form.preventDefault();
+                let item = {
+                    name: '',
+                    number: '',
+                    category: '',
+                    isItemValid: function(){
+
+                        if(this.name !== '' && this.number !== '' && this.category !== '' && this.number <= lvl){
+                            console.log( this.name + " Seorang " + this.category + " Lv." + this.number+ " Joined the hero party");
+                            return true;
+                        }
+                        return false;   
+                    },
+                    addToTable: function(){
+                        const tbody = document.getElementById('tableItem').querySelector('tbody');
+                        const newRow = document.createElement("tr");
+
+                        const nameCol = document.createElement("td");
+                        nameCol.appendChild(document.createTextNode(this.name));
+
+                        const categoryCol = document.createElement("td");
+                        categoryCol.appendChild(document.createTextNode(this.category));
+
+                        const numberCol = document.createElement("td");
+                        numberCol.appendChild(document.createTextNode(this.number));
+
+                        const createdByCol = document.createElement("td");
+                        createdByCol.appendChild(document.createTextNode(createdBy));
+
+                        newRow.appendChild(nameCol);
+                        newRow.appendChild(numberCol);
+                        newRow.appendChild(categoryCol);
+                        tbody.appendChild(newRow);
+                        
+                    },
+                    fillProperty: function(datasource){
+                        item.name = datasource.target['Name'].value;
+                        item.number = datasource.target['Level'].value;
+                        item.category = datasource.target['Category'].value;
+                    }
+                }
+                item.fillProperty(form);
+                if(item.isItemValid()){
+                    rec += 1;
+                    document.getElementById("rec").innerHTML = 'Recruit: ' + rec;
+                    document.getElementById('recuit').reset();
+                    item.addToTable();
+                }
+                else if(item.number > lvl){
+                    console.log("Failed to recruit Lv." + item.number + " " + item.category);
+                    alert("Hero level must be higher than recruit");
+                } else {
+                    alert("All fields must not empty");
+                }
+            }
+        }
+    </script>
+</head>
+
+<body onload="onDocumentFinish()">
+
+    <div class="col-12">
+
+        <div class="col-12 header">
+            <h1 id="efg" class="col-4"></h1>
+            <h1 id="lvl" class="col-4">Level : 1</h1>
+            <h1 id="rec" class="col-4">Recruit : 0</h1>
+            <form class="col-12" id="lvlup">
+                <input class="upBtn" type="submit" value="Training" />
+            </form>
+        </div>
+        <div class="col-4">
+        </div>
+        <div class="col-4 center">
+            <!--Form babu-->
+            <div class="col-12">
+                <form id="recuit">
+    
+                    <label for="Name">Name</label>
+                    <input type="text" name="Name" id="Name"/>
+    
+                    <label for="Level">Level</label>
+                    <input type="number" name="Level" id="Level"/>
+    
+                    <label for="Category">Category</label>
+                    <select name="Category" id="Category">
+                        <option value="Swordman">Swordman</option>
+                        <option value="Paladin">Paladin</option>
+                        <option value="Archer">Archer</option>
+                        <option value="Thief">Thief</option>
+                        <option value="Magician">Magician</option>
+                        <option value="Summoner">Summoner</option>
+                        <option value="Necromancer">Necromancer</option>
+                        <option value="Bard">Bard</option>
+                    </select>
+                    <input type="submit" id="btnSubmit" value="Submit"/>
+                </form>
+            </div>
+            <!--Tabel babu-->
+            <div class="col-12">
+                <table id="tableItem" class="col-12">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Level</th>
+                            <th>Class</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+    <div class="col-12 footer">
+        <h1> Created By : Carlos Maximilliano - 34638</h1>
+    </div>
+</body>
+</html>

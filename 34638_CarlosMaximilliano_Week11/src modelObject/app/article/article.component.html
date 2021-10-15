@@ -1,0 +1,10 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{article.votes}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{article.domain()}}</h6>
+      <p class="card-text">{{article.title}}</p>
+  
+      <a href="#" class="card-link" href (click)="voteUp()">UpVote</a>
+      <a href="#" class="card-link" href (click)="voteDown()">DownVote</a>
+    </div>
+  </div>

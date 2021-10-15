@@ -1,0 +1,45 @@
+1. Kerjakan dalam bentuk txt jelaskan apa perbedaan const, let, dan var secara lengkap. (pahami
+variable ke scope ke 3 hal tersebut). 
+
+A. Const
+merupakan variabel yang tidak dapat di redeclare, artinya kita tidak dapat menggunakan nama variabel yang sama, misalnya
+const key = 10;
+const key = 12;
+maka program akan menjadi error
+Isi dari const juga tidak dapat dirubah (kecuali dalam object atau array), misalnya
+const key = 10;
+key = 12;
+maka program akan menjadi error
+const tidak dapat melakukan hoisting, misalnya
+x = 10;
+const x;
+maka program akan menjadi error
+Const juga hanya mempengaruhi block scope tempat dirinya berada( {} ).
+
+B. let
+sama seperti const, let tidak dapat di duplikasi, misalnya
+let key = 10;
+let key = 12;
+maka program akan error.
+sama seperti const, let tidak dapat di hoisting, misalnya
+x = 10;
+let x;
+maka program akan error.
+Nilai dari let dapat diubah, misalnya
+let x = 5;
+x = 10;
+maka x akan menjadi 10 jika di print.
+sama seperti const, let hanya mempengaruhi block scope tempat dia berada ( {} ).
+
+C. var
+var berbeda dengan let dan const
+sebuah var dapat di declare ulang, misalnya
+var x = 10;
+var x = 12;
+sebuah var dapat di hoisting, misalnya
+x = 10;
+var x;
+maka program akan mengprint nilai x sebagai 10.
+var akan mempengaruhi secara global
+jika sebuah variabel tidak dideklarasi maka dia otomatis akan di assign sebagai global variabel.
+Sehingga menggunakan var cukup berbahaya karena membingungkan coder.

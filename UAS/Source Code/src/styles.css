@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+body
+{
+    font-family: 'Montserrat';
+    background-color: black;
+}
+
+.navbar{
+    background-color: black;
+    border-bottom: 1px solid gray;
+}
+
+.nav-item{
+    margin-right: 24px;
+    font-weight: 200;
+}
+
+.nav-item .active{
+    color: green !important;
+    font-weight: 600;
+}
+
+.line{
+    width: 100%;
+    height: 3px;
+    background-color: greenyellow;
+}
+
+.trailer{
+    background-color: #66b933;
+    padding: 10px 15px;
+    color: white;
+}
+
+.trailer:hover{
+    background-color:transparent;
+    border:1px solid #66b933;
+    padding: 10px 15px;
+    color: #66b933;
+}

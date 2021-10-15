@@ -1,0 +1,81 @@
+1. Sebut dan jelaskan kelemahan serta kelebihan jquery jika dibandingkan oleh vanilla js!
+Semakin banyak semakin baik!
+Kelebihan :
+-jquery simple dan mudah untuk digunakan
+-jquery fleksibel karena didukung berbagai macam plugin
+-open source(gratis)
+-kompatibel dengan seluruh versi CSS
+-kompatibel dengan banyak browser
+-memudahkan untuk mengakses elemen-elemen HTML
+-berinteraksi baik dengan berbagai macam tipe bahasa pemograman
+-dokumentasi dan tutorial lengkap dapat diakses di http://jquery.com
+-file kecil
+-mempersingkat Ajax
+-memiliki API
+-menyediakan fasilitas untuk membuat animasi dengan mudah
+
+Kelamahan:
+-Meskipun diklaim jquery memiliki beban kerja yang ringan (load CPU dan RAM) untuk browser, tetap saja lebih ringan (cepat di-load) website yang tidak menggunakan jquery, alias HTML murni
+-Dari sisi server hosting pun, CPU dan RAM harus mengalokasikan resource yang mereka miliki untuk menangani request terhadap jquery. Pada level tertentu request yang sangat banyak (sangat-sangat banyak) akan membebani server. Solusi: host jquery pada situs lain, seperti Google yang menyediakan request jquery dari servernya.
+-banyaknya versi jquery, menimbulkan kemungkinan adanya versi yang sudah tidak kompatibel
+-lightweight interface jquiry mungkin dapat menimbulkan permasalahan
+
+
+2. Buatlah sebuah fungsi untuk melakukan REQUEST dengan method “POST” yang mengirimkan
+data json dengan format {nama:’Budi’, alamat:’Jl Merpati’, pekerjaan:’Programmer’} ke url
+‘www.budi.com/info-diri’!
+$(function () {
+    var person = {nama :"Budi", alamat:"Jl Merpati", pekerjaan: "Programmer"};
+    $.ajax({
+        type: "POST",
+        data :JSON.stringify(person),
+        url: "www.budi.com/info-diri",
+        contentType: "application/json"
+    });
+});
+
+3. Apakah yang dimaksud dengan ‘callback function’?
+Ketika mengeksekusi codingan, terdapat kemungkinan bahwa code berikutnya akan dijalankan sebelum efek dapat timbul, yang dapat menimbulkan error(misalnya alert muncul terlebih dahulu sebelum efek dapat berlangsung.)
+Untuk mencegah hal tersebut diperlukan penggunaan callback function
+callback function akan dieksekusi setelah efek telah selesai dilakukan.
+Secara sederhana, callback function adalah fungsi yang tidak akan dijalankan hingga sebuah tugas telah selesai dilaksanakan. Ketika tugas telah selesai dikerjakan, barulah callback function akan berjalan.
+
+4. Sebut dan berikan contoh implementasi dari fungsi-fungsi jquery berikut jika dibutuhkan !
+a. .children()
+mereturn direct children dari elemen yang dipilih
+contoh:
+$(document).ready(function(){
+  $("ul").children().css({"color": "red", "border": "2px solid red"});
+});
+
+b. $(‘.budi’).html() dan $(‘#wati’).val()
+$(‘.budi’).html() digunakan untuk mengselect element dengan class "budi" di HTML
+$(‘#wati’).val() digunakan untuk mengambil value pada element dengan id "wati"
+
+
+
+c. .fadeIn() dan .fadeOut()
+fadeIn() digunakan untuk menampilkan element yang di hide
+contoh :
+$("button").click(function(){
+  $("#div1").fadeIn();
+  $("#div2").fadeIn("slow");
+  $("#div3").fadeIn(3000);
+});
+
+fadeOut() digunakan untuk menyembunyikan element yang ditampilkan
+contoh :
+$("button").click(function(){
+  $("#div1").fadeOut();
+  $("#div2").fadeOut("slow");
+  $("#div3").fadeOut(3000);
+});
+
+d. .promise() 
+Mengembalikan promise yang dibuat secara dinamis yang diselesaikan setelah semua tindakan dari jenis tertentu yang terikat ke koleksi, baik di dalam queue atau tidak, telah berakhir
+contoh:
+var div = $( "<div>" );
+ 
+div.promise().done(function( arg1 ) {
+  alert( this === div && arg1 === div );
+});

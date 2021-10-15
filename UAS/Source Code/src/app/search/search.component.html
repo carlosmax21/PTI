@@ -1,0 +1,57 @@
+<div class="container-fluid">
+  <div class="list">
+    <div class="header">
+
+      <div class="row">
+        <div class="col mt-4">
+          
+          <input [(ngModel)]="query" type="text" class="text-line form-control me-2" placeholder="What do you want to watch ?">
+          <button class="btn btn-outline-success btn-block mt-3 mb-4" (click) = "search()">Search</button>
+          
+        </div>
+      </div>
+
+      <div class="row">
+        <div *ngFor="let movie of found " class="col-md-2 col-sm-4">
+          <figure class="figure">
+            <img src="https://image.tmdb.org/t/p/w200{{ movie.poster_path }}" class="figure-img img-fluid mb-2" style="height: 280px;">
+            <button type="button" class="btn btn-info btn-sm btn-block mb-1" data-toggle="modal" data-target="#myModal" (click)="getDetails(movie.id)">Details</button>
+            <figcaption class="figure-caption">
+              <div class="row">
+                <div class="col">
+                  <h5 class="mb-1" style="color: white;">{{ movie.title }}</h5>
+                  <div class="row ml-auto">
+                    <p style="color: white; font-size: 12px;">{{ movie.release_date }}</p>
+                    <span class="fa fa-star" style="color: orange; padding-left: 75px;"> {{ movie.vote_average }}</span>
+                  </div>
+
+                  <!-- Modal -->
+                  <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                      <!-- Modal content-->
+                      <div class="modal-content" style="background-color:black; color: #66b933">
+                        <div class="modal-header">
+                          <h4 id= "modalTitle"class="modal-title">{{detailTitle}}</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p id="modalBody">{{detailOverview}}</p>
+                          <button class="btn trailer" (click)="watchTrailer()">Watch Trailer</button>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger btn-block" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

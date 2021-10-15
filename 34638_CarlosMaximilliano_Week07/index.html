@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hotel Room Reservation</title>
+        <link rel="stylesheet" type="text/css" href="jui.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <script>
+            $( function() {
+              $( "#accordion" ).accordion();
+            } );
+            </script>
+        <div class="col-besar">
+            <table id="tableOrder">
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>Order Room</th>
+                        <th>Deposit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Peter</td>
+                        <td>Griffin</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>Lois</td>
+                        <td>Griffin</td>
+                        <td>$150</td>
+                    </tr>
+                    <tr>
+                        <td>Joe</td>
+                        <td>Swanson</td>
+                        <td>$300</td>
+                    </tr>
+                    <tr>
+                        <td>Cleveland</td>
+                        <td>Brown</td>
+                        <td>$250</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container col-kecil" id="accordion">
+            <h3>Single Room</h3>
+            <div>
+                <p>Nam ut laoreet neque. Donec imperdiet tortor id nulla faucibus sollicitudin. 
+                    Fusce tincidunt mollis felis sed dapibus. Integer imperdiet, risus id imperdiet 
+                   dignissim, lorem mi condimentum justo, non viverra lacus lorem quis nibh. Proin 
+                   viverra enim fringilla, vulputate quam vitae, sagittis ipsum. Morbi pellentesque 
+                   luctus risus, eu feugiat nisl viverra vitae.
+                </p>
+                <button class="btnAddOrder" id="single">Order Room</button>
+            </div>
+            <h3>Double Room</h3>
+            <div>
+                <p>Nam ut laoreet neque. Donec imperdiet tortor id nulla faucibus sollicitudin. 
+                    Fusce tincidunt mollis felis sed dapibus. Integer imperdiet, risus id imperdiet 
+                    dignissim, lorem mi condimentum justo, non viverra lacus lorem quis nibh. Proin 
+                    viverra enim fringilla, vulputate quam vitae, sagittis ipsum. Morbi pellentesque 
+                    luctus risus, eu feugiat nisl viverra vitae.
+                </p>
+                <button class="btnAddOrder" id="double">Order Room</button>
+            </div>
+            <h3>Duplex</h3>
+            <div>
+                <p>Nam ut laoreet neque. Donec imperdiet tortor id nulla faucibus sollicitudin. 
+                    Fusce tincidunt mollis felis sed dapibus. Integer imperdiet, risus id imperdiet dignissim, 
+                    lorem mi condimentum justo, non viverra lacus lorem quis nibh. Proin viverra enim fringilla,
+                    vulputate quam vitae, sagittis ipsum. Morbi pellentesque luctus risus, eu feugiat nisl viverra vitae.
+                </p>
+                <button class="btnAddOrder" id="duplex">Order Room</button>
+            </div>
+            <h3>Cabana</h3>
+            <div>
+                <p>Nam ut laoreet neque. Donec imperdiet tortor id nulla faucibus sollicitudin. 
+                    Fusce tincidunt mollis felis sed dapibus. Integer imperdiet, risus id imperdiet dignissim,
+                    lorem mi condimentum justo, non viverra lacus lorem quis nibh. Proin viverra enim fringilla,
+                    vulputate quam vitae, sagittis ipsum. Morbi pellentesque luctus risus, eu feugiat nisl viverra vitae.
+                </p>
+                <button class="btnAddOrder" id="cabana">Order Room</button>
+            </div>
+        </div>
+        <div id="dialog-form" title="Create new order">
+            <p class="validateTips">All Form field are required</p>
+            <form>
+                <label for="nama">Name</label>
+                <input type="text" id="nama" class="text ui-widget-content-ui-corner-all">
+
+                <label for="price">Price</label>
+                <input type="text" id="price" class="text ui-widget-content-ui-corner-all">
+
+                <label for="deposit">Deposit</label>
+                <input type="text" id="deposit" class="text ui-widget-content-ui-corner-all">
+            </form>
+        </div>
+    </body>
+</html>

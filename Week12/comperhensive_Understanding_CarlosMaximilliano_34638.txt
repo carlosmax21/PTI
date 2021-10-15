@@ -1,0 +1,14 @@
+1. service adalah sebuah kategori luas yang meliputi nilai, fungsi, maupun fitur yang diperlukan sebuah aplikasi.
+Service digunakan untuk memudahkan programmer dalam mengcoding, dimana sebuah fungsi, nilai, ataupun fitur tidak perlu
+ditulis berkali kali, melainkan dapat diinject melalui service. Sedangkan, class dapat diibaratkan seperti sebuah blueprint
+untuk membuat object dengan fungsi dan properti tertentu.
+Service dapat diibaratkan sebagai sebuah class yang lebih spesifik. Hal ini berarti setiap class tidak dapat menjadi servis,
+dan kemiripan class menjadi sebuah servis tergantung dari codingan programmer
+
+2. 
+a. Import component dan tambahkan path dan component pada Routes di dalam app.routing.module.ts
+(dapat langsung dibuat ketika ng new, ataupun ditambahkan dengan mengetik
+ng generate module app-routing --flat --module=app pada CLI)
+b. tambahkan router outlet (<router-outlet></router-outlet>) pada app.component.html, sehingga router tau dimana untuk menampilkan
+tampilan yang sudah diarahkan
+c. masukan routerLink pada anchor yang telah dibuat di html. routerLink berfungsi untuk melakukan navigasi

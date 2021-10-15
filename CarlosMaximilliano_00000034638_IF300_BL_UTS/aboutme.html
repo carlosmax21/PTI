@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Me</title>
+        <link href="main.css" rel="stylesheet"/>
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <div class="middle">
+            <img class="photo" src="myPhoto.jpg">
+            <div style="color: rgb(179, 179, 204); text-align: center;">
+                <h2>Carlos Maximilliano</h2>
+                <table class="margin">
+                    <td>34638</td>
+                    <td>PTI-BL</td>
+                </table>
+                <br>
+                <img onclick="goToInstagram()" class="logo" src="insta.png" width="40" height="40"> &ThickSpace; &ThickSpace;
+                <img onclick="goToFacebook()" class="logo" src="facebook.png" width="40" height="40">
+                <br>
+                <div>
+                    <button class="aboutButton" id="myBtn">My Resource</button>
+                    <br>
+                    <button class="aboutButton" onclick="goToHome()">Back to Home</button>
+                </div>
+            </div>
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>My Resources</h2>
+              </div>
+              <div class="modal-body">
+                <p>w3schools.com</p>
+                <p>youtube.com</p>
+                <p>css-tricks.com</p>
+                <p>stackoverflow.com</p>
+                <p>imagecolorpicker.com</p>
+              </div>
+              <div class="modal-footer">
+                <h3>@Carlos Maximilliano</h3>
+              </div>
+            </div>
+        </div>
+          <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+            </script>
+    </body>
+</html>

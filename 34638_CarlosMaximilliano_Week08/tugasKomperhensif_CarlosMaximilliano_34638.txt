@@ -1,0 +1,23 @@
+1. Jelaskan grid system yang diterapkan oleh Bootstrap!
+grid system adalah sistem yang menggunakan serangakaian container, rows, dan columns untuk menata dan menyelaraskan konten. grid system ini dibuat dengan menggunakan flebox dan sepenuhnya responsive.
+Sehingga dengan menggunakan grid system ini, programmer dapat lebih mudah dalam menata webnya dan membuat web menjadi responsive.
+
+2. Sebutkan Bootstrap component lainnya yang tersedia dan penjelasan singkat kegunaan masing-masing component tersebut (10 komponen)! 
+a. Glyphicons : menyediakan font icon yang digunakan dalam  web
+b. Dropdown: menampilkan beberapa menu dalam bentuk list ketika di klik
+c. Label: memberi keterangan dalam box/form
+d. Pagination: membagi halaman web yang terlalu panjang menjadi halaman-halaman. Sehingga pengguna tidak repot untuk mengscroll terlalu jauh kebawah.
+e. Input Group: menggabungkan elemen form ketika menginput data (misalnya sudah terdapat +62 ketika ingin mendaftarkan nomor telepon)
+f. Breadcrumbs: menampilkan lokasi user dalam web(misal Home/Library)
+g. Button Group: menumpuk beberapa tombol dalam satu tombol/baris
+h. Navbar: menambahkan menu nagivasi di website
+i. Media Object: untuk membuat komponen yang akan sering digunakan seperti comment, tweet, dll.
+j. Jumbotron: memperluas area pandang untuk menampilkan konten utama di situs(bersifat flexible)
+
+3.  Sebutkan dan jelaskan 5 fungsionalitas Javascript yang telah disediakan oleh Bootstrap selain
+Modal! 
+a. Alert: menampilkan pesan feedback atas tindakan yang dilakukan pengguna
+b. Transition: memberikan efek transisi ketika menggerakan elemen website
+c. Tab: membuat navigasi dalam bentuk tab
+d. Scrollspy: mengupdate navigasi bootstrap untuk menunjukan komponen link yang aktif berdasarkan lokasi scroll
+e. Carousel: untuk membuat slideshow yang menampilkan gambar atau slide yang berisi text secara bergantian

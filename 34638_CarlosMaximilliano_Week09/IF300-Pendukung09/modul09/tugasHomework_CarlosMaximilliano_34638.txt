@@ -1,0 +1,13 @@
+1. Cari tau tata penggunaan pingendo for HTML5 and CSS3 Prototyping! 
+Pingendo merupakan aplikasi yang dapat digunakan dalam membuat sebuah website. Untuk menggunakan pingendo, seseorang harus terlebih dahulu mendownload aplikasi ini.
+Setelah selesai mendownload dan menginstall, maka pengguna dapat memulai dengan membuat file -> new project. Pengguna dapat memilih untuk menggunakan salah satu
+template yang telah tersedia atau memulai dari blank sheet. Setelah itu, pengguna sudah dapat memulai pembuatan prototype website. Pengguna terlebih dahulu harus membuka
+file index.html pada pingendo yang akan menjadi homepage dari website tersebut. Pada bagian kiri pingendo akan terdapat toolbar yang akan memudahkan pengguna, dikarenakan
+pengguna hanya tinggal mengdrag and drop konten yang diingankan (misalnya grid, text, dll), yang kemudian dapat di edit pada bagian sebelah kanan (warna, ukuran, dll).
+Pengguna dapat dengan mudah melihat stuktur website pada bagian "section" yang terdapat pada bagian kanan pingendo. melalui bagian section, pengguna dapat mengakses bagian tertentu
+dengan mudah. Selain "section", terdapat juga "theme" yang dapat digunakan untuk menentukan tema yang akan digunakan oleh website, seperti warna primary, secondary, tipe font, dll.
+pada toolbar yang terletak pada bagian atas pingendo, pengguna dapat menyimpan perubahan pada prototype, melakukan preview terhadap hasil website di browser, maupun melihat tampilan
+website pada media hp, tablet, laptop, maupun pc (responsive). terdapat juga "</> code" yang akan menampilkan codingan yang digunakan dalam website dengan menggunakan html dan sass.
+Tentunya dengan menggunakan pingendo, maka melakukan prototyping pada html5 dan css3 akan menjadi lebih mudah. Hal ini dikarenakan dalam penggunaannya, pengguna hanya tinggal melakukan
+drag and drop div yang diingankan pada bagian tertentu. Selain itu, setiap div dapat dikonfigurasi dengan mudah, seperti menambah id maupun class, ataupun menambah background dll.
+Pengguna juga dapat mengakses code html dan sass secara manual, sehingga memungkinkan dilakukan konfigurasi secara manual dalam pembuatan web.
